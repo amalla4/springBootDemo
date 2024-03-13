@@ -10,11 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Log
 public class DemoApplication implements CommandLineRunner {
 	private ColorPrinter colorPrinter;
-
 	public DemoApplication(ColorPrinter colorPrinter){
 		this.colorPrinter = colorPrinter;
 	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
