@@ -9,11 +9,11 @@ public class ColorPrinterImpl implements ColorPrinter {
     private RedPrinter redPrinter;
     private BluePrinter bluePrinter;
     private GreenPrinter greenPrinter;
-
-    public ColorPrinterImpl(){
-        this.redPrinter = new EnglishRedPrinter();
-        this.bluePrinter = new EnglishBluePrinter();
-        this.greenPrinter = new EnglishGreenPrinter();
+    //Spring will check for which dependencies are needed and inject them
+    public ColorPrinterImpl(RedPrinter redPrinter, BluePrinter bluePrinter, GreenPrinter greenPrinter){
+        this.redPrinter = redPrinter;
+        this.bluePrinter = bluePrinter;
+        this.greenPrinter = greenPrinter;
     }
 
     @Override
